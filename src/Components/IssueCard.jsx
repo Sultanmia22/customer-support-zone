@@ -1,6 +1,6 @@
 
 import Card from './Card';
-const IssueCard = ({currentData,handleData}) => {
+const IssueCard = ({currentData,handleData , handleTaskInfo}) => {
     
      
    
@@ -11,13 +11,13 @@ const IssueCard = ({currentData,handleData}) => {
 
         <div>
             <h1 className='text-2xl font-semibold mb-3 '>Customer Tickets</h1>
-           <div  className='grid grid-cols-2 gap-5'>
+           <div  className='grid md:grid-cols-2 grid-cols-1 gap-5'>
              {
               currentData.map( data => <Card 
                 key={data.id}
                 data={data}
                 handleData={handleData}
-               
+               handleTaskInfo={handleTaskInfo}
                 ></Card> )
             }
            </div>

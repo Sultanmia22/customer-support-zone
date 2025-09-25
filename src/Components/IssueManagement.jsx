@@ -36,10 +36,17 @@ const handleRemove = (removeData) => {
 //! Remove card function 
 
 const handleCard = (cardData) => {
-   const filterData = currentData.filter( filterItem => filterItem.customer !== cardData.customer )
+   const filterData = currentData.filter( filterItem => filterItem.id !== cardData.id )
    setCurrentData(filterData)
 }
+
+//! Task info 
+
+const [infoSta,setInfoSta] = useState(false)
  
+const handleTaskInfo = (sta) => {
+   setInfoSta(sta)
+} 
 
   return (
     <div className=" max-w-[1440px] mx-auto ">
@@ -49,18 +56,18 @@ const handleCard = (cardData) => {
       ></Countbox>
 
       
-      <div className="grid grid-cols-12 gap-6 mb-[80px]">
+      <div className="grid md:grid-cols-12 gap-6 mb-[80px]">
 
-      <div className=" grid col-span-9">
+      <div className=" grid md:col-span-9 order-2">
            <IssueCard 
           currentData={currentData}
           handleData={handleData}
           resolve={resolve}
-          
+          handleTaskInfo={handleTaskInfo}
           ></IssueCard>
       </div>
 
-        <div className=" grid col-span-3 ">
+        <div className=" grid md:col-span-3 order-1 ">
             
           <IssueTask
            clickedData={clickedData}
@@ -68,6 +75,8 @@ const handleCard = (cardData) => {
            resolve={resolve}
            handleRemove={handleRemove}
           handleCard={handleCard}
+          infoSta={infoSta}
+
           ></IssueTask>
         </div>
 

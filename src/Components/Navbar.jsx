@@ -3,13 +3,13 @@ import React from 'react';
 const Navbar = () => {
     return (
         <div className=' bg-[#FFFFFF]  py-4 border-1 border-gray-200'>
-            <nav className='flex justify-between items-center max-w-[1440px] mx-auto'>
-                <div>
-                    <h2 className='text-2xl font-bold' >CS — Ticket System</h2>
+            <nav className='flex  md:flex-row flex-col justify-center md:justify-between md:items-center max-w-[1440px] mx-auto'>
+                <div className='text-center md:text-start'>
+                    <h2 className='text-2xl font-bold md:text-center mb-5 md:m-0' >CS — Ticket System</h2>
                 </div>
 
-                <div className='flex gap-8 items-center'>
-                    <ul className='flex space-x-8 items-center'>
+                <div className='flex  flex-col md:flex-row gap-8 md:items-center'>
+                    <ul className='flex space-x-8 items-center justify-center md:justify-start '>
                         <li>Home</li>
                         <li>FAQ</li>
                         <li>Changelog</li>
@@ -17,7 +17,7 @@ const Navbar = () => {
                         <li>Download</li>
                         <li>Contact</li>
                     </ul>
-                      <button className='bg-linear-to-l from-[#9F62F2] to-[#632EE3] px-4 py-3 rounded-sm font-bold text-white ' > <span>+</span> New Ticket </button> 
+                      <button className='bg-linear-to-l from-[#9F62F2] to-[#632EE3] px-4 py-3 rounded-sm font-bold text-white w-[200px] md:w-full mx-auto' > <span>+</span> New Ticket </button> 
                 </div>
             </nav>
         </div>
