@@ -1,7 +1,7 @@
 
-import { Suspense } from 'react'
+import { Suspense} from 'react'
 import './App.css'
-import Countbox from './Components/Countbox'
+ import { ToastContainer} from 'react-toastify';
 import Footer from './Components/Footer'
 import IssueManagement from './Components/IssueManagement'
 import Navbar from './Components/Navbar'
@@ -13,20 +13,24 @@ const fetchData = async () => {
 
 function App() {
  const fetchPromise = fetchData()
+  
+   
+
 
   return (
+
     <div className='bgColor'>
       <Navbar></Navbar>
 
-      <Countbox></Countbox>
-
-    <Suspense>
+    <Suspense fallback={<span class="loading loading-spinner loading-xl  "></span>}>
         <IssueManagement 
         fetchPromise={fetchPromise}
       ></IssueManagement>
     </Suspense>
 
       <Footer></Footer>  
+
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

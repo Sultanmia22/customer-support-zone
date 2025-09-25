@@ -1,12 +1,34 @@
 import React from 'react';
+import TaskCard from './TaskCard';
+import ResolveCard from './ResolveCard';
 
-const IssueTask = () => {
+const IssueTask = ({clickedData,handleResolveData,resolve,handleRemove,handleCard}) => {
+  const data = clickedData
     return (
-        <div className='border-2 border-amber-300 '>
-           <div>
-             <h2>THIS IS A ISSUE TASK</h2>
-           </div>
+     <div>
+      <h2 className='text-2xl font-semibold mb-3 border-b-2 border-gray-200  pb-2 '>Task Status</h2>
+       {
+        data.map( taskData => <TaskCard
+        taskData={taskData}
+        handleResolveData={handleResolveData}
+        handleRemove={handleRemove}
+        handleCard={handleCard}
+        ></TaskCard> )
+       }   
+
+       <div>
+        <h2 className='text-2xl font-semibold mb-4 mt-10 border-b-2 border-gray-200  pb-2 '>Resolved Task</h2>
+        <div>
+          {
+            resolve.map(reData => <ResolveCard
+             reData={reData}
+            ></ResolveCard>)
+          }
         </div>
+        
+       </div>
+     </div>
+      
     );
 };
 
