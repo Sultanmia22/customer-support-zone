@@ -8,8 +8,8 @@ const Navbar = () => {
                     <h2 className='text-2xl font-bold md:text-center mb-5 md:m-0' >CS — Ticket System</h2>
                 </div>
 
-                <div className='flex  flex-col md:flex-row gap-8 md:items-center'>
-                    <ul className='flex space-x-8 items-center justify-center md:justify-start '>
+                <div className='flex  flex-col md:flex-row gap-3 md:gap-8 md:items-center'>
+                    <ul className='flex flex-col md:flex-row space-y-4 md:space-x-8 items-center justify-center md:justify-start '>
                         <li>Home</li>
                         <li>FAQ</li>
                         <li>Changelog</li>
