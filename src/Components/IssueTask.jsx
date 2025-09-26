@@ -11,8 +11,8 @@ const IssueTask = ({clickedData,handleResolveData,resolve,handleRemove,handleCar
   }
     return (
      <div>
-      <h2 className='text-2xl font-semibold mb-3 border-b-2 border-gray-200  pb-2 '>Task Status</h2>
-      <p className='text-[#627382]'> {infoSta == true ? '' : 'Select a ticket to add to Task Status'} </p>
+      <h2 className='text-2xl font-semibold mb-3 border-b-2 border-gray-200  pb-2 text-center md:text-start '>Task Status</h2>
+      <p className='text-[#627382] text-center md:text-start '> {infoSta == true ? '' : 'Select a ticket to add to Task Status'} </p>
        {
         data.map( taskData => <TaskCard
         taskData={taskData}
@@ -24,8 +24,8 @@ const IssueTask = ({clickedData,handleResolveData,resolve,handleRemove,handleCar
        }   
 
        <div>
-        <h2 className='text-2xl font-semibold mb-4 mt-10 border-b-2 border-gray-200  pb-2 '>Resolved Task</h2>
-        <p className='text-[#627382]'> {resSolveTaskInfo == true ? ' ' : 'No resolved tasks yet.'} </p>
+        <h2 className='text-2xl font-semibold mb-4 mt-10 border-b-2 border-gray-200  pb-2 text-center md:text-start '>Resolved Task</h2>
+        <p className='text-[#627382] text-center md:text-start '> {resSolveTaskInfo == true ? ' ' : 'No resolved tasks yet.'} </p>
         <div>
           {
             resolve.map(reData => <ResolveCard

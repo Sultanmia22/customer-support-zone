@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import celanderImg from "../assets/ri_calendar-line.png";
 import { toast } from "react-toastify";
-
+import correctImg from '../assets/correct.png'
 const Card = ({ data, handleData, handleTaskInfo }) => {
   const [statuses, setStutas] = useState(false);
 
   const handlegetData = (data) => {
     setStutas(true);
-    toast(" In Progress ");
+    toast(
+      <div className="flex items-center gap-1">
+        <img src={correctImg} alt="" className="w-5" /> In Progress
+      </div>
+    );
     handleData(data);
     handleTaskInfo(true);
   };

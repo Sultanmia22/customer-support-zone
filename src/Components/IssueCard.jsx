@@ -10,7 +10,7 @@ const IssueCard = ({currentData,handleData , handleTaskInfo}) => {
     return (
 
         <div>
-            <h1 className='text-2xl font-semibold mb-3 '>Customer Tickets</h1>
+            <h1 className='text-2xl font-semibold mb-3 text-center md:text-start '>Customer Tickets</h1>
            <div  className='grid md:grid-cols-2 grid-cols-1 gap-5'>
              {
               currentData.map( data => <Card 

@@ -1,9 +1,13 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-
+import correctImg from '../assets/correct.png'
 const TaskCard = ({taskData,handleResolveData,handleRemove,handleCard , handleResolveTaskInfo}) => {
     const handleResolve = (data) => {
-        toast('Completed')
+        toast(
+              <div className="flex items-center gap-1">
+                <img src={correctImg} alt="" className="w-5" /> Completed
+              </div>
+            );
         handleResolveData(data)
         handleRemove(data)
        handleCard(data)

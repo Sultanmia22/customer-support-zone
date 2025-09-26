@@ -58,7 +58,7 @@ const handleTaskInfo = (sta) => {
       
       <div className="grid md:grid-cols-12 gap-6 mb-[80px]">
 
-      <div className=" grid md:col-span-9 order-2">
+      <div className=" grid md:col-span-9 order-2 md:order-none">
            <IssueCard 
           currentData={currentData}
           handleData={handleData}
@@ -67,7 +67,7 @@ const handleTaskInfo = (sta) => {
           ></IssueCard>
       </div>
 
-        <div className=" grid md:col-span-3 order-1 ">
+        <div className=" grid md:col-span-3 order-1 md:order-none ">
             
           <IssueTask
            clickedData={clickedData}

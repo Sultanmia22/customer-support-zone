@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           <ul className="md:text-start text-center mb-4 ">
-            <h2 className="footer_title">Services</h2>
+            <h2 className="footer_title mt-2 md:mt-0 ">Services</h2>
 
             <div className="footer_text">
               <li>Products & Services</li>
@@ -48,25 +48,25 @@ const Footer = () => {
             </div>
           </ul>
 
-          <div className="">
+          <div className="mt-2 md:mt-0">
             <h2 className="footer_title md:text-start text-center ">Social Links</h2>
             <div className="space-y-2 md:text-start text-center ">
-              <div className="flex items-center md:justify-start justify-center gap-2">
+              <div className="flex flex-col md:flex-row  items-center md:justify-start justify-center gap-2">
                 <img src={xImg} alt="" />
                 <p className="footer_text">@CS — Ticket System</p>
               </div>
 
-              <div className="flex items-center gap-2 md:justify-start justify-center">
+              <div className="flex flex-col md:flex-row  items-center gap-2 md:justify-start justify-center">
                 <img src={inImg} alt="" />
                 <p className="footer_text">@CS — Ticket System</p>
               </div>
 
-              <div className="flex items-center gap-2 md:justify-start justify-center">
+              <div className="flex flex-col md:flex-row  items-center gap-2 md:justify-start justify-center">
                 <img src={fbImg} alt="" />
                 <p className="footer_text">@CS — Ticket System</p>
               </div>
 
-              <div className="flex items-center gap-2 md:justify-start justify-center">
+              <div className="flex flex-col md:flex-row items-center gap-2 md:justify-start justify-center">
                 <img src={mailImg} alt="" />
                 <p className="footer_text">support@cst.com</p>
               </div>
